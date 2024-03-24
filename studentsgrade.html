@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Grade</title>
+</head>
+<body>
+
+<p id="response"></p>
+
+<script>
+// Prompt for the user to input grades
+const promptText = "Enter the grade:";
+const userInput = prompt(promptText);
+
+// Function to determine grade
+function userGrade(userinput) {
+    let finalGrade;
+    if(userinput >= 79 && userinput <= 100) {
+        finalGrade ="A";
+    } else if(userinput >= 69 && userinput <= 78) {
+        finalGrade ="B";
+    } else if(userinput >= 59 && userinput <= 68) {
+        finalGrade ="C";
+    } else if(userinput >= 49 && userinput <= 58) {
+        finalGrade ="D";
+    } else if(userinput >= 0 && userinput < 49) {
+        finalGrade ="E";
+    } else {
+        finalGrade = "Invalid grade";
+    }
+    document.getElementById("response").innerHTML = "Final Grade: " + finalGrade;
+}
+userGrade(parseInt(userInput));
+</script>
+
+</body>
+</html>
